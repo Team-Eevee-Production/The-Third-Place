@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      // this allows interopability btwn ES6 module syntax and CommonJS module syntax
+      "outDir": "./dist/",
+      "noImplicitAny": true,
+      // Can use CommonJS module syntax
+      "module": "commonjs",
+      "target": "es6",
+      // Knows to turn JSX components into `React.createElement`
+      "jsx": "react",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "lib": ["dom", "dom.iterable", "esnext"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }
