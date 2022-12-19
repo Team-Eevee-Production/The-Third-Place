@@ -5,9 +5,9 @@
       // this allows interopability btwn ES6 module syntax and CommonJS module syntax
       "outDir": "./dist/",
       "noImplicitAny": true,
+      "target": "ESNext",
       // Can use CommonJS module syntax
       "module": "commonjs",
-      "target": "es6",
       // Knows to turn JSX components into `React.createElement`
       "jsx": "react",
       "allowJs": true,
