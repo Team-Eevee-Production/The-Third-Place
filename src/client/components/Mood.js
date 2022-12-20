@@ -5,12 +5,12 @@ export default function Mood ()  {
         <div>
             <div>
                 <h1>What mood are you in today?</h1>
-                <button>Starving</button>
-                <button>Famished</button>
-                <button>Hungry</button>
-                <button>NeedFood</button>
-                <button>PleaseGod</button>
-                <button>AlmostDinner</button>
+                <button>Focused</button>
+                <button>Cozy</button>
+                <button>Playful</button>
+                <button>Gloomy</button>
+                <button>Energetic</button>
+                <button>Loving</button>
             </div>
 
             <div>
