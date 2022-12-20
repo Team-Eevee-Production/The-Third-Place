@@ -10,3 +10,15 @@ body {
 .btn {
   background-color: white;
 }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
