@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Mood from './Mood'
+import Image from './Image'
+import Music from './Music';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Hello World</h1>
+export default function App () {
+    return (
+        <div className='MainContainer'>
+             <div className='MoodBox'>
+                <Mood></Mood>
             </div>
-        )
-    }
+            <div className='ImageBox'>
+                <Image></Image>
+            </div>
+            <div className='MusicBox'>
+                <Music></Music>
+            </div>
+        </div>
+    )
 }
-
-export default App;

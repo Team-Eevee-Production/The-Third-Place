@@ -1,0 +1,9 @@
+body {
+  color: rgb(242, 27, 27);
+  background-color: rgb(255, 255, 255);
+}
+.MusicBox {
+  display: flex;
+  background-color: rgb(228, 52, 52);
+  color: rgb(27, 222, 222);
+}
