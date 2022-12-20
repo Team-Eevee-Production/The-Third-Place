@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Having all routes be checked
-//app.use('/img', imageRouter)
+app.use('/img', imageRouter)
 
 // Catch for invalid request
 // app.use('/*', (req: Request, res: Response) => {
