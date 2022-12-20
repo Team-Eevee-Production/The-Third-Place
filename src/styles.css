@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  font-family: 'VT323', monospace;
 }
 
 html body {
@@ -7,6 +8,8 @@ html body {
   height: 100%;
   margin: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
   color: rgb(242, 27, 27);
@@ -16,6 +19,115 @@ body {
   display: flex;
   background-color: rgb(228, 52, 52);
   color: rgb(27, 222, 222);
+}
+.btn {
+  width: 10%;
+  font-size:30px;
+  background-color: white;
+  border-radius: 20px 0;
+  transition: .8s;
+  color: black;
+  border: 6px double black;
+  outline: none;
+  font-family: 'VT323', monospace;
+}
+.btn:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+  -4px -4px 6px 0 rgba(116, 125, 136, .5),
+  inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.buttonArea {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.moodMessage {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0px 0px 1px hsl(0, 100%, 80%),
+    0px 0px 2px hsl(0, 100%, 80%),
+    0px 0px 15px hsl(0, 100%, 50%),
+    0px 0px 60px red;
+}
+
+.FeelingCreative {
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 0px 0px 2px hsl(120, 100%, 80%),
+    0px 0px 15px green,
+    0px 0px 60px green;
+}
+
+.form-wrapper {
+  text-align: center;
+}
+.form-wrapper {
+  width: 450px;
+  padding: 15px;
+  margin: 20px auto 50px auto;
+  background: #444;
+  background: rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+/* Form text input */
+
+.form-wrapper input {
+  width: 330px;
+  height: 20px;
+  padding: 10px 5px;
+  float: left;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+  border: 0;
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+}
+
+.form-wrapper input:focus {
+  outline: 0;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+}
+
+.form-wrapper input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.form-wrapper input:-moz-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.form-wrapper input:-ms-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Form submit button */
+.form-wrapper button {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 110px;
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #d83c3c;
+  border-radius: 0 3px 3px 0;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
 
 .MainContainer {
@@ -28,7 +140,6 @@ body {
 
 .MainContainer {
   color: #FFF;
-  /* position: absolute; */
   margin: 0;
 }
 
