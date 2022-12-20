@@ -46,21 +46,22 @@ export default function Mood ()  {
     return (
         <div>
             <div>
-                <h1>What mood are you in today?</h1>
-                <button id='1' className='btn' onClick={() => handleClick(1)}>Starving</button>
-                <button id='2' className='btn' onClick={() => handleClick(2)}>Famished</button>
-                <button id='3' className='btn' onClick={() => handleClick(3)}>Hungry</button>
-                <button id='4' className='btn' onClick={() => handleClick(4)}>NeedFood</button>
-                <button id='5' className='btn' onClick={() => handleClick(5)}>PleaseGod</button>
-                <button id='6' className='btn' onClick={() => handleClick(6)}>AlmostDinner</button>
+                <h1 className = 'moodMessage'>How is your heart today? </h1>
+                <div className ='buttonArea'>
+                <button id='1' className='btn' onClick={() => handleClick(1)}>Focused</button>
+                <button id='2' className='btn' onClick={() => handleClick(2)}>Cozy</button>
+                <button id='3' className='btn' onClick={() => handleClick(3)}>Groovy</button>
+                <button id='4' className='btn' onClick={() => handleClick(4)}>Gloomy</button>
+                <button id='5' className='btn' onClick={() => handleClick(5)}>Energetic</button>
+                <button id='6' className='btn' onClick={() => handleClick(6)}>Loving</button>
+                </div>
             </div>
 
-            <div>
-                <h1>Feeling Lonely? Try Life Alert!</h1>
+            <div className="form-wrapper">
                 <form>
-                <label htmlFor='inputBox'>INPUT</label>
-                    <input type='text' id='inputBox' name='ghost'></input>
-                    
+                    <label htmlFor='inputBox' className='FeelingCreative'>Feeling creative? Describe here</label>
+                    <input type='text' id='inputBox' name='ghost' placeholder='Unicorn on Rainbow'></input>
+                    <button type='submit' className="submit">Make Magic</button>
                 </form>
             </div>
         </div>
