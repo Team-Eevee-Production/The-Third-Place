@@ -17,7 +17,7 @@ describe('Image Route Tests', function() {
       .end(done)
   });
   test('response array size greater than 0', function(done) {
-    expect(body.length).toBeGreaterThan(50);
+    expect(body.length).toBeGreaterThan(0);
     done();
   });
 });
