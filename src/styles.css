@@ -7,6 +7,7 @@ html body {
   width: 100%;
   height: 100%;
   margin: 0;
+  cursor: grab;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
@@ -30,7 +31,7 @@ body {
   height: 10vw;
   width: 100vw;
   justify-content: center;
-  margin-bottom: 44vh;
+  margin-bottom: 0px;
 }
 
 .player_container{
@@ -97,6 +98,7 @@ body {
   -4px -4px 6px 0 rgba(116, 125, 136, .5),
   inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
   inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  cursor: pointer;
 }
 
 .buttonArea {
@@ -113,7 +115,7 @@ body {
 .login-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .signup-form {
@@ -121,6 +123,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
 }
+
 
 .moodMessage {
   font-size: 50px;
@@ -220,6 +223,7 @@ body {
   0px 0px 16px hsl(244, 90%, 49%),
   0px 0px 30px hsl(244, 100%, 50%),
   0px 0px 60px white;
+  cursor: pointer;
 }
 
 .favorite {
@@ -233,7 +237,7 @@ body {
   display: block;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 2000px;
   background: linear-gradient(to bottom, #020107 0%, #201b46 100%);
 }
 
