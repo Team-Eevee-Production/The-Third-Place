@@ -27,6 +27,7 @@ export default function Login ()  {
 
     return (
         <div>
+            {/* <img src="../../assets/Third Place.png" alt="logo"/> */}
             <div className = 'login-form'>
                 <label>Username: </label>
                     <input

@@ -8,9 +8,9 @@ export default function App () {
     const [moodState,setMoodState] = useState(0)
     return (
         <div className='MainContainer'>
-            <div className='UserBox'>
+            {/* <div className='UserBox'>
                 <User></User>
-            </div>
+            </div> */}
             
             <div className="sky">
                 <div className="stars"></div>
