@@ -3,9 +3,11 @@ import Image from './Image';
 import React, { useEffect, useState } from 'react';
 import { DataRouterContext } from 'react-router/dist/lib/context';
 
+
+
 export default function Mood (props: {moodState: number; setMoodState: Function;})  {
     //change the color of each mood once it's clicked 
-    const [moodState,setMoodState] = useState(0)
+    //const [moodState,setMoodState] = useState(0)
     const [formData, setFormData] = useState({
         mood: "",
         prompt: ""
@@ -13,7 +15,7 @@ export default function Mood (props: {moodState: number; setMoodState: Function;
     const [imageArr, setImageArr] = useState([])
 
     function handleClick(num: number, mood: string) {
-        setMoodState(num);
+        props.setMoodState(num);
 
         setFormData(oldData => {
             return (
@@ -23,12 +25,6 @@ export default function Mood (props: {moodState: number; setMoodState: Function;
                 }
             );
         });
-
-        console.log('formData', formData);
-
-        const body = formData;
-        const url = '/img';
-
     }
 
     useEffect(() => {
@@ -42,7 +38,7 @@ export default function Mood (props: {moodState: number; setMoodState: Function;
     //using state to change button color
     //can add any html styling
       useEffect(() => {
-        
+        console.log('Inside useEffect -Mood', props.moodState)
         if (props.moodState === 1) {
             const button1 = document.getElementById('1')
             button1.style.backgroundColor = 'blue';
@@ -72,7 +68,7 @@ export default function Mood (props: {moodState: number; setMoodState: Function;
             const button6 = document.getElementById('6')
             button6.style.backgroundColor = 'purple';
         }
-      },[moodState])
+      },[props.moodState])
     
 
      const handleSubmit = (e: { preventDefault: () => void; }) => {
@@ -119,7 +115,7 @@ export default function Mood (props: {moodState: number; setMoodState: Function;
     return (
         <div>
             <div>
-                <button id='7' className='bd' onClick={() => handleClick(7)}></button>
+                <button id='7' className='bd' onClick={() => handleClick(7, 'birthday')}></button>
                 <h1 className = 'moodMessage'>How is your heart today? </h1>
                 <div className ='buttonArea'>
                     <button id='1' className='btn' onClick={() => handleClick(1, 'focused')} value={formData.mood} name='mood'>Focused</button>
