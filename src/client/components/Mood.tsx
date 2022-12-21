@@ -56,6 +56,7 @@ export default function Mood (props:BtnState)  {
     return (
         <div>
             <div>
+                <button id='7' className='bd' onClick={() => handleClick(7)}></button>
                 <h1 className = 'moodMessage'>How is your heart today? </h1>
                 <div className ='buttonArea'>
                 <button id='1' className='btn' onClick={() => handleClick(1)}>Focused</button>
