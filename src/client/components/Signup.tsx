@@ -5,26 +5,29 @@ import axios, { AxiosResponse } from 'axios';
 export default function Signup ()  {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [firstname, setFirstname] = useState('');
-    const [lastname, setLastname] = useState('');
+    const [first_name, setFirstname] = useState('');
+    const [last_name, setLastname] = useState('');
+    const [loggedIn, setIsLoggedIn] = useState('false')
 
     const userData = {
         username,
         password,
-        firstname,
-        lastname
+        first_name,
+        last_name
     }
 
     const signup = async(event: {preventDefault: () => void}) => {
         event.preventDefault();
         
         try {
-            let response = await axios.post('/login', userData)
+            let response = await axios.post('http://localhost:3000/user/signup', userData)
             if (response.status === 200){
+                console.log('Signed up')
                 setUsername('');
                 setPassword('');
                 setFirstname('');
-                setLastname('')
+                setLastname('');
+                setIsLoggedIn('true');
             }
         } catch (err) {
             console.log(`Error logging in: ${err}`)
@@ -38,14 +41,14 @@ export default function Signup ()  {
                 <input
                     placeholder='Enter First Name'
                     type='text'
-                    name='firstname'
+                    name='first_name'
                     onChange={(e) => setFirstname(e.target.value)}
                     />
                 <label>LastName: </label>
                 <input
                     placeholder='Enter Last Name'
                     type='text'
-                    name='lastname'
+                    name='last_name'
                     onChange={(e) => setLastname(e.target.value)}
                     />
                 <label>Username: </label>
