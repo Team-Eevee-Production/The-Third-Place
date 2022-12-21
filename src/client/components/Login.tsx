@@ -9,7 +9,7 @@ export default function Login ()  {
     const goLogin = async (event: { preventDefault: () => void }) => {
         event.preventDefault();
         try {
-          let res = await axios.post('/login', {
+          let res = await axios.post('http://localhost:3000/user/login', {
             username,
             password
           });
@@ -18,6 +18,7 @@ export default function Login ()  {
             setUsername('');
             setPassword('');
             setLoggedIn(true)
+            //disappear login box and say Welcome first_name last_name
           }
         } catch (err) {
           console.error(`❌ Error in fetching register POST request: ${err}`);

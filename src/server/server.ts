@@ -2,6 +2,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import imageRouter from './routes/imageApi';
 import initRouter from './routes/initApi';
+import userRouter from './routes/userApi';
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 //Having all routes be checked
 app.use('/init', initRouter)
 app.use('/img', imageRouter)
+app.use('/user', userRouter)
 
 // Catch for invalid request
 app.use('/*', (req: Request, res: Response) => {

@@ -26,9 +26,17 @@ const initController: initController = {
       .then(() => {
         db.query(imagesDbQuery, [])
       })
-      .then(() => {return next ();})
-  }
-};
+      .then(() => next())
+      .catch((err) => {
+        return next({
+        log: `Error caught in initController.createDB ${err}`,
+        status: 400,
+        message: `Error has occured in initController.createDB. ERROR: ${err}`
+      })
+    })
+
+  }  
+  };
 
 
 export default initController;
