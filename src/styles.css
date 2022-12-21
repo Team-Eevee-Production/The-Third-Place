@@ -20,11 +20,17 @@ body {
   background-color: white;
 }
 
+.bd {
+  background-color: black;
+  
+}
 .MusicBox {
   display: flex;
   flex-direction: row;
   height: 10vw;
   width: 100vw;
+  justify-content: center;
+  margin-bottom: 44vh;
 }
 
 .player_container{

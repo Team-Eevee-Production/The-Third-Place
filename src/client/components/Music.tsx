@@ -10,7 +10,7 @@ export default function Music (props:BtnState)  {
   
   
     
-    if ( props.moodState === 0) {
+    if ( props.moodState === 1) {
       return (
         <div className='SpotifyBox'>
             <Iframe  styles={{borderRadius:"12px"}} url="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" width="100%" height="380" frameBorder={0} allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></Iframe>
@@ -45,14 +45,20 @@ export default function Music (props:BtnState)  {
         </div>
       )
     }
-     if ( props.moodState === 6) {
+     else if ( props.moodState === 6) {
       return (
         <div className='SpotifyBox'>
             <Iframe styles={{borderRadius:"12px"}} url="https://open.spotify.com/embed/playlist/37i9dQZF1DWXqpDKK4ed9O?utm_source=generator" width="100%" height="380" frameBorder={0} allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></Iframe>
         </div>
       )
     }
-  
+    else if ( props.moodState === 7) {
+      return (
+        <div className='SpotifyBox'>
+            <Iframe styles={{borderRadius:"12px"}} url="https://open.spotify.com/embed/track/6lNTl7eExy6VS8rnD3O8re?utm_source=generator" width="100%" height="352" frameBorder={0} allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></Iframe>
+        </div>
+      )
+    }
 
      else return (
       <div></div>
@@ -60,3 +66,6 @@ export default function Music (props:BtnState)  {
   
   
 }
+
+//<Iframe styles={{borderRadius:"12px"}} url="https://open.spotify.com/embed/track/6lNTl7eExy6VS8rnD3O8re?utm_source=generator" width="100%" height="352" frameBorder={0} allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></Iframe>
+//<Iframe styles={{borderRadius:"12px"}} url="https://open.spotify.com/embed/playlist/37i9dQZF1DWXqpDKK4ed9O?utm_source=generator" width="100%" height="380" frameBorder={0} allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></Iframe>

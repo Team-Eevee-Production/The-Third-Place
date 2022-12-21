@@ -119,6 +119,7 @@ export default function Mood (props: {moodState: number; setMoodState: Function;
     return (
         <div>
             <div>
+                <button id='7' className='bd' onClick={() => handleClick(7)}></button>
                 <h1 className = 'moodMessage'>How is your heart today? </h1>
                 <div className ='buttonArea'>
                     <button id='1' className='btn' onClick={() => handleClick(1, 'focused')} value={formData.mood} name='mood'>Focused</button>
