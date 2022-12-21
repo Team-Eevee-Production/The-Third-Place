@@ -6,6 +6,10 @@ export interface imageController {
   fetchImages: ResponseObject;
 }
 
+export interface initController {
+  createDB: ResponseObject;
+}
+
 export type image = {
   "id": string,
   "gallery": string,

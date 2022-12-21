@@ -2,7 +2,8 @@ import { validateHeaderValue } from 'http';
 import Image from './Image';
 import React, { useEffect, useState } from 'react';
 import { DataRouterContext } from 'react-router/dist/lib/context';
-export default function Mood ()  {
+
+export default function Mood (props: {moodState: number; setMoodState: Function;})  {
     //change the color of each mood once it's clicked 
     const [moodState,setMoodState] = useState(0)
     const [formData, setFormData] = useState({
@@ -28,59 +29,45 @@ export default function Mood ()  {
         const body = formData;
         const url = '/img';
 
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'Application/JSON'
-        //     },
-        //     body: JSON.stringify(body)
-        // })
-        //     .then(res => {
-        //         res.json();
-        //     })
-
-        //     .then(data => {
-        //         console.log('Data:', data);
-        //     })
-
-        //     .catch((err) => {
-        //         console.log('Error:', err);
-        //     });
     }
 
     useEffect(() => {
+        
         const btnElements = document.querySelectorAll<HTMLElement>('.btn');
         for (let i = 0; i < btnElements.length; i++) {
             btnElements[i].style.backgroundColor = 'white';
         }
-    },[moodState])
+    },[props.moodState])
 
+    //using state to change button color
+    //can add any html styling
       useEffect(() => {
-        if (moodState === 1) {
+        
+        if (props.moodState === 1) {
             const button1 = document.getElementById('1')
             button1.style.backgroundColor = 'blue';
         }
-       else if (moodState === 2) {
+       else if (props.moodState === 2) {
             
             const button2 = document.getElementById('2')
             button2.style.backgroundColor = 'red';
         }
-        else if (moodState === 3) {
+        else if (props.moodState === 3) {
             
             const button3 = document.getElementById('3')
             button3.style.backgroundColor = 'teal';
         }
-        else if (moodState === 4) {
+        else if (props.moodState === 4) {
             
             const button4 = document.getElementById('4')
             button4.style.backgroundColor = 'yellow';
         }
-        else if (moodState === 5) {
+        else if (props.moodState === 5) {
             
             const button5 = document.getElementById('5')
             button5.style.backgroundColor = 'orange';
         }
-       else if (moodState === 6) {
+       else if (props.moodState === 6) {
             
             const button6 = document.getElementById('6')
             button6.style.backgroundColor = 'purple';
