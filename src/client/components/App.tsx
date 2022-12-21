@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import Mood from './Mood'
 import Image from './Image'
 import Music from './Music';
-// import Login from './Login';
-// import Signup from './Signup';
+import User from './User';
 
 export default function App () {
     const [moodState,setMoodState] = useState(0)
     return (
         <div className='MainContainer'>
-            {/* <div className='LoginBox'>
-                <Login></Login>
+            <div className='UserBox'>
+                <User></User>
             </div>
-            <div className='SignupBox'>
-                <Signup></Signup>
-            </div> */}
+            
+            <div className="sky">
+                <div className="stars"></div>
+                <div className="stars1"></div>
+                <div className="stars2"></div>
+                <div className="shooting-stars"></div>
              <div className='MoodBox'>
                 <Mood
                 moodState={moodState}
@@ -30,6 +32,8 @@ export default function App () {
                 setMoodState={setMoodState}
                 ></Music>
             </div>
-        </div>
+            </div>
+            </div>
+        
     )
 }

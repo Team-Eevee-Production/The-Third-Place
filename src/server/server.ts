@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import imageRouter from './routes/imageApi';
+import initRouter from './routes/initApi';
 
 const app = express();
 
@@ -13,12 +14,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Having all routes be checked
-//app.use('/img', imageRouter)
+app.use('/init', initRouter)
+app.use('/img', imageRouter)
 
 // Catch for invalid request
-// app.use('/*', (req: Request, res: Response) => {
-//   return res.sendStatus(404);
-// });
+app.use('/*', (req: Request, res: Response) => {
+  return res.sendStatus(404);
+});
 
 // Global error catching
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
