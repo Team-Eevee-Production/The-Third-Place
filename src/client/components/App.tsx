@@ -23,9 +23,9 @@ export default function App () {
                 setMoodState={setMoodState}
                 ></Mood>
             </div>
-            <div className='ImageBox'>
+            {/* <div className='ImageBox'>
                 <Image></Image>
-            </div>
+            </div> */}
             <div className='MusicBox'>
                 <Music
                 moodState={moodState}
