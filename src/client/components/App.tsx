@@ -11,7 +11,7 @@ export default function App () {
             <div className='UserBox'>
                 <User></User>
             </div>
-            <div className='MoodBox'>
+            
             <div className="sky">
                 <div className="stars"></div>
                 <div className="stars1"></div>
