@@ -14,9 +14,9 @@ export default function App () {
              <div className='MoodBox'>
                 <Mood></Mood>
             </div>
-            <div className='ImageBox'>
+            {/* <div className='ImageBox'>
                 <Image></Image>
-            </div>
+            </div> */}
             <div className='MusicBox'>
                 <Music></Music>
             </div>
